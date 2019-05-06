@@ -1,0 +1,224 @@
+ /* ##### GLOBAL SECTION #### */
+ /* Font and color variables */
+:root {
+	--font-family: Helvetica,"Open Sans", "Helvetica Neue", Arial, sans-serif;
+	--primary-color: #0a3645;
+	--font-color: #0a3645;
+	--white:  #ffffff;
+	--nantucket-morning: #f0f2f5;
+	--extra-light-gray: #eaeef5;
+	--font-size: 16px;
+}
+
+/* >>>>>>>>>  Body ELEMENT  <<<<<<<<<<< */
+html,body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	background-color: var(--extra-light-gray);
+	font-family: var(--font-family);
+}
+
+/* >>>>>>>>>  MAIN CONTAINER  <<<<<<<<<<< */
+#container {
+	height: 100%;
+	color: var(--font-color);
+	font-size: calc(var(--font-size) * 0.875);
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+/* >>>>>>>>>  Nav ELEMENT  <<<<<<<<<<< */
+#container nav {
+	position: fixed;
+    top: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: var(--primary-color);
+}
+#container nav .col {
+	padding: 0px;
+}
+#container .navbar {
+	padding: 0px;
+}
+#container .nav-item {
+	padding: 0px 32px;
+}
+#container .nav-item.active {
+	background-color: #4a636c;
+}
+#container .nav-link {
+	padding: 0px;
+	color: var(--white);
+	font-size: calc(var(--font-size) * 0.625);
+	font-weight: bold;
+	font-style: normal;	
+}
+
+/* >>>>>>>>> SVG ELEMENT  <<<<<<<<<<< */
+.logo {
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+}
+.caret-down {
+	width: 9px;
+	height: 5.1px;
+	object-fit: contain;
+}
+.hamburger {
+	width: 10.6px;
+	height: 9.7px;
+	object-fit: contain;
+}
+.seq-badge{
+	width: 25px;
+	height: 25px;
+	padding-top: 2px;
+	border-radius: 5px;
+	background-color: #98cb65;
+	color: var(--white);
+}
+
+/* >>>>>>>>>  TYPOGRAPHY ELEMENT  <<<<<<<<<<< */
+h1,
+input,
+button {
+	font-family: var(--font-family);
+	color: var(--font-color);
+}
+#category h1 {
+	display: inline-block;
+	padding-left: 12px;
+	letter-spacing: .25px;
+	font-size: calc(var(--font-size) * 0.875);
+}
+#category input {
+	width: 80%;
+	padding: 4px 2px;
+	box-sizing: border-box;
+	border: solid 1px #dbe1e5;
+	color: #0a3645;
+	font-size: calc(var(--font-size) * 0.875);
+}
+#category input:focus{
+	border: 1px solid #06b4de;
+	outline: none;
+}
+button.close-icon-button {
+	background: none;
+    margin: 0;
+    border: none;
+	padding: 0;
+}
+
+/* >>>>>>>>>  TABLE ELEMENT  <<<<<<<<<<< */
+.table td, .table th {
+	border: none;
+	vertical-align: middle;
+}
+.table thead th {
+	padding-bottom: 8px;
+	color: #7a8a90;
+	font-size: calc(var(--font-size) * 0.625);
+	letter-spacing: .50px;
+}
+#category tbody tr:nth-of-type(odd) {
+	box-shadow: 0 1px 3px 0 rgba(10, 54, 69, 0.16);
+	background-color:var(--white);
+}
+#category tbody tr:nth-of-type(even) {
+	background-color: var(--nantucket-morning);
+}
+
+/* >>>>>>>>>  PAGE-SPECIFIC STYLES <<<<<<<<<<< */
+#category {
+	width: 70%;
+	margin: 64px auto;
+	box-shadow: 0 1px 3px 0 rgba(10, 54, 69, 0.16);
+	background-color: var(--white);
+}
+.category-header {
+	margin: 0;
+	padding: 22px 5px;
+	background-color: var(--white);
+}
+.add-item {
+	float: right;
+	color: #06b4de;
+	font-size: calc(var(--font-size) * 0.625);
+	letter-spacing: .75px;
+	line-height: 5.6px;
+	text-transform: uppercase;
+}
+.save-item {
+	padding: 0px;
+	color: #06b4de;
+	font-size: calc(var(--font-size) * 0.75);
+	font-weight: bold;
+	letter-spacing: .100px;
+	text-transform: uppercase;
+}
+.category-item {
+	width: 40%;
+	padding: 0px;
+	color: #0a3645;
+	font-size: calc(var(--font-size) * 0.75);
+} 
+#greeting {
+	padding: 0px 10px;
+	font-size: calc(var(--font-size) * 0.75);
+	font-weight: normal;
+}
+#greeting img {
+    margin: 0px 6px;
+}
+
+/* For Ipad (portrait) */
+@media only screen and (max-width: 1024px) {
+	#container .navbar-nav {
+		flex-direction: unset;
+    	flex-wrap: wrap;
+	}
+	#container .nav-item {
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 768px) {
+	#container nav {
+		height: 54px;
+	}
+	#container .navbar {
+		padding: 0px 18px;
+	}
+	#category {
+		width: 90%;
+		margin: 66px auto;
+	}
+	#category h1 {
+		padding-left: 16px;
+	}
+	#category input {
+		width: 100%;
+	}
+	.category-header {
+		padding: 14px 3px;
+		padding-bottom: 28px;
+		background-color: var(--white);
+	}
+	.add-item {
+		white-space: nowrap;
+	}
+	.hamburger-menu {
+		width: 24.1px;
+		height: 13.6px;
+		object-fit: contain;
+	}
+}

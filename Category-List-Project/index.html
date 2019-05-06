@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Category List</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/category.css" media="screen" charset="utf-8">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<nav class="navbar navbar-expand-lg">
+				<div class="col text-left">
+					<div class="d-none d-md-block">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Nav 1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Nav 2</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Nav 3</a>
+							</li>
+						</ul>
+					</div>
+					<img class="hamburger-menu d-md-none" src="assets/img/hamburger-menu.svg" alt="logo"/>
+				</div>
+				<div class="col text-center">
+					<a  href="#">
+						<img class="logo" src="assets/img/logo.svg" alt="logo"/>
+					</a>
+				</div>
+				<div class="col text-right">
+					<a class="nav-link d-none d-md-block" href="#" id="greeting"> 
+						<span>Welcome Christy</span>
+						<img class="caret-down" src="assets/img/caret-down.svg" alt="caret down">
+					</a>
+				</div>
+			</nav>
+
+			<section id="category">
+				<div class="category-header">
+					<div class="float-left"><h1>Section</h1></div>
+					<div class="float-right"><button type="button" class="btn add-item">+ Add Category</button></div>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>&nbsp;</th>
+							<th>Category</th>
+							<th>SEQ.</th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<!-- Dynamically populated from the category list object. -->
+					<tbody id="category-list-data" class="sortable">
+					</tbody>
+				</table>
+			</section>
+		</div>
+		<script type="text/javascript" src="assets/js/category.js"></script>
+	</body>
+</html>
